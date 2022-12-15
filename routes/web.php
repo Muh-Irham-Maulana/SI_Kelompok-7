@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,46 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+
+Route::get('/admin', function () {
+    return view('dashboard', [ "content" => "dashboard" ]);
+});
+
+Route::get('/admin/content-adopt', function () {
+    return view('content.post-adopt', [ "content" => "post" ]);
+});
+
+Route::get('/admin/chat', function () {
+    return view('content.chat', [ "content" => "chat" ]);
+});
+
+Route::get('/admin/gallery', function () {
+    return view('content.gallery', [ "content" => "gallery" ]);
+});
+
+Route::get('/admin/customers', [CustomerController::class, 'index']);
+
+Route::get('/admin/order-ongoing', function () {
+    return view('content.order-ongoing', [ "content" => "order" ]);
+});
+
+Route::get('/admin/order-history', function () {
+    return view('content.order-history', [ "content" => "order" ]);
+});
+
+Route::get('/admin/employee-working', [EmployeeController::class, 'index']);
+
+Route::get('/admin/form', function () {
+    return view('content.form', [ "content" => "form" ]);
+});
+
+Route::get('/admin/form-cat', function () {
+    return view('content.form-cat', [ "content" => "form" ]);
 });

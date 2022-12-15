@@ -1,0 +1,153 @@
+.adopt{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding:20px;
+    box-shadow: 4px 4px 16px rgb(0 0 0 / 10%);
+    border: 1px solid rgba(128, 128, 128, 0.177);
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 20px;
+}
+
+.adopt__header{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.adopt__icon{
+    font-size: 25px;
+}
+
+.adopt__header .search-form{
+    width: 50%;
+}
+
+.adopt__container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.adopt__card{
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(128, 128, 128, 0.177);
+    box-shadow: 2px 2px 8px rgb(0 0 0 / 10%);
+    border-radius: 5px;
+    gap: 10px;
+    flex: 1 0 24%;
+    max-width: 40%;
+    height: 187px;
+    overflow: hidden;
+}
+
+.adopt__image{
+    max-height: 187px;
+    height: 100%;
+    border-top-left-radius: 5px;
+}
+
+.adopt__details{
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    height: 167px;
+    overflow: hidden;
+}
+
+.adopt__detailBox{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.adopt__detail--name{
+    font-size: 18px;
+    font-weight: 600;
+    align-self: center;
+}
+
+.adopt__detail--desc{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-align: justify;
+    overflow: hidden;
+    font-size: 0.625rem;
+}
+
+.adopt__actionBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-right: 0.625rem;
+    gap: 10px;
+}
+
+.adopt__action{
+    font-size: 18px;
+    color: var(--black);
+    transition: all 0.5s ease;
+}
+
+.adopt__action--edit:hover{
+    color: var(--blue);
+}
+
+.adopt__action--delete:hover{
+    color: red;
+}
+
+.adopt__footer{
+    align-self: center;
+}
+
+
+@media screen and (max-width:1342px){
+    .adopt__card{
+        flex-direction: column;
+        height: auto;
+        gap: 5px;
+        padding: 10px;
+    }
+
+    .adopt__imageContainer{
+        align-self: center;
+        height: fit-content;
+    }
+
+    .adopt__image{
+        height: 187px;
+    }
+
+    .adopt__details{
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .adopt__detail--name{
+        align-self: center;
+    }
+
+    .adopt__detail--desc{
+        -webkit-line-clamp: 5;
+        text-overflow: ellipsis;
+    }
+
+    .adopt__actionBox{
+        flex-direction: row;
+    }
+
+}

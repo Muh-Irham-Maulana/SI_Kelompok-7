@@ -1,0 +1,117 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.form__wrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.form__contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding: 20px;
+    border: 0.5px solid rgba(24, 28, 33, 0.13);
+    border-radius: 8px;
+}
+
+.contents__header .header__title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.contents__form {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    row-gap: 10px;
+    padding: 0 15px;
+}
+
+.input__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: flex-start;
+    row-gap: 5px;
+}
+
+.form__label{
+    font-family: 'Open Sans';
+    text-align: left;
+    color:black;
+    font-size: 0.875rem;
+    font-weight: bold;
+}
+
+.form__input {
+    align-self: stretch;
+    padding: 12px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+}
+
+ .form__select {
+    align-self: stretch;
+    padding: 12px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+}
+
+.button__form {
+    text-align: right;
+    align-self: flex-end;
+}
+
+.form__button {
+    cursor: pointer;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    font-size: 0.8125rem;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    padding: 0.185rem 0.65rem;
+    line-height: 1.84615385;
+    border-radius: 4px;
+}
+
+.buttonCancel {
+    color: #fff !important;
+    background-color: rgb(218, 32, 11);
+    border-color:  rgb(218, 32, 11);
+    margin-right: 8px;
+}
+
+.buttonCancel:hover {
+    background-color: rgb(145, 22, 8);
+}
+
+.buttonSave {
+    color: #fff !important;
+    background-color: rgb(110, 189, 101);
+    border-color: rgb(110, 189, 101);
+}
+
+.buttonSave:hover {
+    background-color: rgb(94, 163, 86);
+}
+
+@media screen and (max-width: 900px) {
+     .form__wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
